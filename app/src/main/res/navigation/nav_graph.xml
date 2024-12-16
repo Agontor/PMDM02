@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/mainFragment"> <!-- Cambia esto al fragmento inicial de tu app -->
+
+    <!-- Definición del MainFragment -->
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="gonzaleztorralbo.arturo.pmdm02.HeroListFragment"
+        android:label="Main Fragment" >
+
+        <!-- Agrega aquí las acciones y destinos que se pueden realizar desde el MainFragment si es necesario -->
+
+        <action
+            android:id="@+id/action_mainFragment_to_heroDetailFragment"
+            app:destination="@id/heroDetailFragment" />
+    </fragment>
+
+    <!-- Definición del HeroDetailFragment -->
+    <fragment
+        android:id="@+id/heroDetailFragment"
+        android:name="gonzaleztorralbo.arturo.pmdm02.HeroDetailFragment"
+        android:label="Hero Detail Fragment" >
+        <action
+            android:id="@+id/action_heroDetailFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
+
+
+<!--<navigation xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/nav_graph"-->
+<!--    app:startDestination="@id/homeFragment">-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/homeFragment"-->
+<!--        android:name="gonzaleztorralbo.arturo.pmdm02.HomeFragment"-->
+<!--        android:label="fragment_home"-->
+<!--        tools:layout="@layout/fragment_home" />-->
+<!--    <fragment-->
+<!--        android:id="@+id/settingsFragment"-->
+<!--        android:name="gonzaleztorralbo.arturo.pmdm02.settingsFragment"-->
+<!--        android:label="fragment_settings"-->
+<!--        tools:layout="@layout/fragment_settings" />-->
+<!--</navigation>-->
